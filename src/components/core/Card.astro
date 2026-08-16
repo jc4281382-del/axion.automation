@@ -1,0 +1,40 @@
+---
+export interface Props {
+  class?: string;
+  glow?: boolean;
+  hoverEffect?: boolean;
+  as?: 'div' | 'article' | 'section' | 'a';
+  href?: string;
+  id?: string;
+}
+
+const {
+  class: className = '',
+  glow = false,
+  hoverEffect = true,
+  as: Component = 'div',
+  href,
+  id,
+  ...rest
+} = Astro.props;
+
+const Tag = href ? 'a' : Component;
+---
+
+<Tag
+  href={href}
+  id={id}
+  class:list={[
+    "relative rounded-2xl bg-glass-card p-6 md:p-8 transition-all duration-300 overflow-hidden",
+    hoverEffect && "hover:border-border-focus hover:shadow-card hover:-translate-y-1",
+    glow && "border-glow-primary",
+    className
+  ]}
+  {...rest}
+>
+  <div class="relative z-10">
+    <slot />
+  </div>
+  <!-- Subtle Gradient Highlight Overlay -->
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent opacity-50"></div>
+</Tag>

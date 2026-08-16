@@ -1,0 +1,33 @@
+---
+export interface Props {
+  variant?: 'primary' | 'success' | 'outline' | 'tech';
+  size?: 'sm' | 'md';
+  class?: string;
+}
+
+const {
+  variant = 'primary',
+  size = 'sm',
+  class: className = '',
+} = Astro.props;
+
+const baseStyles = "inline-flex items-center gap-1.5 font-medium rounded-full tracking-wide uppercase transition-colors";
+
+const sizeStyles = {
+  sm: "text-[11px] px-2.5 py-0.5",
+  md: "text-xs px-3.5 py-1",
+};
+
+const variantStyles = {
+  primary: "bg-accent-violet/15 text-accent-light border border-accent-violet/30",
+  success: "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
+  outline: "bg-transparent text-text-secondary border border-border-subtle",
+  tech: "bg-palette-grey-1100/80 text-accent-light border border-border-subtle font-mono",
+};
+
+const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
+---
+
+<span class={combinedClasses}>
+  <slot />
+</span>

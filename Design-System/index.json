@@ -1,0 +1,28 @@
+{
+  "url": "https://antigravity.google/",
+  "hostname": "antigravity.google",
+  "pathname": "/",
+  "viewport": {
+    "width": 972,
+    "height": 636,
+    "dpr": 1
+  },
+  "document": {
+    "width": 957,
+    "height": 10611
+  },
+  "counts": {
+    "elements": 1872,
+    "styleGroups": 703,
+    "references": 20
+  },
+  "truncated": false,
+  "files": {
+    "page.html": "DOM renderizado, elementos anotados com data-dm-id, <script> removidos",
+    "styles.raw.css": "CSS legível concatenado (inline + same-origin)",
+    "styles.computed.json": "grupos de estilo resolvidos (não-default), deduplicados, por data-dm-id",
+    "layout.json": "bounding box por data-dm-id (coordenadas do documento)",
+    "references.json": "URLs externas para buscar: CSS de CDN, imagens, fontes"
+  },
+  "capturedAt": "2026-08-15T18:50:07.049Z"
+}

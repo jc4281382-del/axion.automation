@@ -1,0 +1,66 @@
+---
+export interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'glow';
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
+  target?: string;
+  rel?: string;
+  id?: string;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+const {
+  href,
+  variant = 'primary',
+  size = 'md',
+  class: className = '',
+  target,
+  rel,
+  id,
+  type = 'button',
+  ...rest
+} = Astro.props;
+
+const baseStyles = "inline-flex items-center justify-center font-medium rounded-full transition-all duration-300 select-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-light/40 disabled:opacity-50 disabled:cursor-not-allowed";
+
+const sizeStyles = {
+  sm: "text-xs px-3.5 py-1.5 gap-1.5",
+  md: "text-sm px-5 py-2.5 gap-2",
+  lg: "text-base px-7 py-3.5 gap-2.5 font-semibold",
+};
+
+const variantStyles = {
+  primary: "bg-gradient-to-r from-accent-blue to-accent-violet text-white shadow-glow-sm hover:shadow-glow-lg hover:brightness-110 active:scale-[0.98]",
+  secondary: "bg-palette-grey-1100 text-text-primary border border-border-subtle hover:border-border-focus hover:bg-palette-grey-1000 active:scale-[0.98]",
+  outline: "border border-accent-light/30 text-accent-light hover:bg-accent-light/10 hover:border-accent-light/60 active:scale-[0.98]",
+  ghost: "text-text-secondary hover:text-white hover:bg-white/5 active:scale-[0.98]",
+  glow: "relative bg-gradient-to-r from-accent-blue to-accent-violet text-white shadow-glow-lg hover:shadow-[0_0_30px_rgba(113,51,237,0.6)] hover:scale-[1.02] active:scale-[0.98]",
+};
+
+const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
+---
+
+{
+  href ? (
+    <a
+      href={href}
+      class={combinedClasses}
+      target={target}
+      rel={target === '_blank' ? (rel || 'noopener noreferrer') : rel}
+      id={id}
+      {...rest}
+    >
+      <slot />
+    </a>
+  ) : (
+    <button
+      type={type}
+      class={combinedClasses}
+      id={id}
+      {...rest}
+    >
+      <slot />
+    </button>
+  )
+}

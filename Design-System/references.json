@@ -1,0 +1,27 @@
+{
+  "stylesheets": [
+    "https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.css",
+    "https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,slnt,wdth,wght,ROND@8..144,-10..0,25..150,400..500,0..100&display=swap",
+    "https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital@0;1&display=swap",
+    "https://fonts.googleapis.com/css2?family=Google+Symbols:opsz,wght,FILL,GRAD,ROND@20..48,100..700,0..1,-50..200,0..100&display=block"
+  ],
+  "images": [
+    "https://antigravity.google/assets/image/antigravity-cursor.png",
+    "https://antigravity.google/assets/image/product/new-chat.png",
+    "https://antigravity.google/assets/image/landing/antigravity-cli.png",
+    "https://antigravity.google/assets/image/landing/feature-3.jpg",
+    "https://antigravity.google/assets/image/landing/landing-thumbnail-fullstack.jpg",
+    "https://antigravity.google/assets/image/landing/landing-thumbnail-enterprise.jpg",
+    "https://antigravity.google/assets/image/landing/landing-thumbnail-frontend.jpg",
+    "https://antigravity.google/assets/image/blog/3.7-Flash---Square.jpg",
+    "https://antigravity.google/assets/image/blog/Custom_Agents_Blog_1x1.png",
+    "https://antigravity.google/assets/image/blog/3.6-Flash---Square.png",
+    "https://antigravity.google/assets/image/blog/Google-IO---Square.jpg",
+    "https://antigravity.google/assets/image/blog/AGY2-Square.jpg",
+    "https://antigravity.google/assets/image/blog/Agent-Teams-Square.jpg",
+    "https://antigravity.google/assets/image/blog/AGY-CLI-Blog---Square.png",
+    "https://antigravity.google/assets/image/blog/AGY-SDK-Blog---Square.png",
+    "https://antigravity.google/assets/image/blog/AGY-Enterprise---Square.png"
+  ],
+  "fonts": []
+}
