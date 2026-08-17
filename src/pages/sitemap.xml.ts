@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
 export const GET: APIRoute = async ({ site }) => {
-  const baseUrl = site ? site.toString().replace(/\/$/, '') : 'https://axion.com.br';
+  const baseUrl = site ? site.toString().replace(/\/$/, '') : 'https://axion-automation.pages.dev';
   const blogPosts = await getCollection('blog');
 
   const staticPages = [
