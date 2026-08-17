@@ -1,0 +1,134 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Container from '../../components/core/Container.astro';
+import SectionHeader from '../../components/core/SectionHeader.astro';
+import Card from '../../components/core/Card.astro';
+import Button from '../../components/core/Button.astro';
+import Badge from '../../components/core/Badge.astro';
+import SchemaService from '../../components/seo/SchemaService.astro';
+import SchemaBreadcrumbs from '../../components/seo/SchemaBreadcrumbs.astro';
+import FAQAccordion from '../../components/sections/FAQAccordion.astro';
+import DiagnosisCTA from '../../components/sections/DiagnosisCTA.astro';
+
+const metaTitle = "Agência de IA e Automação de WhatsApp | AXION Enterprise";
+const metaDescription = "Agência de Inteligência Artificial especializada em Agentes de IA para WhatsApp, automação de processos com n8n e integração com CRM. Reduza custos operacionais sem mensalidades abusivas.";
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Soluções', url: '/solucoes' },
+  { name: 'Agência de IA', url: '/solucoes/agencia-de-ia' },
+];
+
+const faqs = [
+  {
+    question: "O que faz uma Agência de IA para empresas?",
+    answer: "Uma Agência de IA desenvolve e treina agentes virtuais personalizados com a base de conhecimento da sua empresa. Integramos modelos de linguagem (como ChatGPT e Claude) diretamente ao seu WhatsApp, CRM e banco de dados via n8n, permitindo que a IA qualifique leads, faça agendamentos e tire dúvidas 24/7 sem intervenção humana."
+  },
+  {
+    question: "Qual a diferença entre uma plataforma de chatbot SaaS e um Agente de IA da AXION?",
+    answer: "Plataformas prontas (SaaS) cobram mensalidades recorrentes por mensagem ou usuário e prendem sua empresa a um sistema fechado. Na AXION, entregamos a propriedade do código e do fluxo de automação. Sua empresa paga apenas pelo custo real de infraestrutura e API (até 70% mais barato em escala) e não fica refém de assinaturas abusivas."
+  },
+  {
+    question: "Existe risco de banimento no WhatsApp ao usar Agentes de IA?",
+    answer: "Não quando a arquitetura é construída com boas práticas. Trabalhamos tanto com a WhatsApp Cloud API oficial quanto com instâncias isoladas de alto desempenho (como Evolution API), utilizando ritmos de envio humanizados, tratamento de áudio e texto, e mecanismos de fallback direto para atendentes humanos."
+  },
+  {
+    question: "Em quanto tempo a automação com IA é implementada?",
+    answer: "Nosso ciclo médio de desenvolvimento e treinamento do Agente de IA leva entre 5 a 14 dias úteis, incluindo o mapeamento dos processos da sua empresa, a engenharia de prompts, o teste em ambiente isolado e a integração com seu CRM."
+  }
+];
+---
+
+<PageLayout title={metaTitle} description={metaDescription}>
+  <Fragment slot="schema">
+    <SchemaService
+      name="Agência de IA — Agentes para WhatsApp e Automação Empresarial"
+      serviceType="Artificial Intelligence & Automation Engineering"
+      description={metaDescription}
+    />
+    <SchemaBreadcrumbs items={breadcrumbs} />
+  </Fragment>
+
+  <!-- Hero Section -->
+  <section class="pt-20 pb-16 md:pt-28 md:pb-20 border-b border-border-subtle bg-background relative overflow-hidden">
+    <Container size="lg">
+      <nav class="flex items-center gap-2 text-xs text-text-muted mb-6" aria-label="Breadcrumbs">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <a href="/solucoes" class="hover:text-white transition-colors">Soluções</a>
+        <span>/</span>
+        <span class="text-text-secondary">Agência de IA</span>
+      </nav>
+
+      <div class="max-w-4xl">
+        <div class="mb-4">
+          <Badge variant="primary" size="md">Engenharia de Automação &amp; IA</Badge>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
+          Agência de IA sob medida: Agentes para WhatsApp e Automações com n8n.
+        </h1>
+        <p class="text-lg sm:text-xl text-text-secondary leading-relaxed mb-8">
+          Desenvolvemos agentes de inteligência artificial humanizados e fluxos de trabalho avançados no n8n. Escale o atendimento da sua empresa, automatize tarefas repetitivas e reduza custos operacionais em até 39%.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <Button href="/diagnostico" variant="glow" size="lg">
+            Diagnóstico de Automação Gratuito &rarr;
+          </Button>
+          <Button
+            href="https://wa.me/5521992341112?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Agentes%20de%20IA%20para%20WhatsApp"
+            target="_blank"
+            variant="secondary"
+            size="lg"
+          >
+            Falar pelo WhatsApp
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Pilares das Soluções de IA -->
+  <section class="py-20 bg-background-deep">
+    <Container size="lg">
+      <SectionHeader
+        badge="Soluções Corporativas"
+        title="O que uma Engenharia de IA sob medida entrega para seu negócio"
+        subtitle="Esqueça chatbots engessados baseados em botões. Entregamos agentes com raciocínio lógico e conhecimento do seu produto."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Card class="p-6 sm:p-8">
+          <div class="text-3xl font-mono text-accent-light font-bold mb-4">01</div>
+          <h2 class="text-xl font-bold text-white mb-3">Agentes de IA para WhatsApp</h2>
+          <p class="text-sm text-text-secondary leading-relaxed">
+            Atendimento humanizado 24 horas por dia. O agente interpreta mensagens de texto e áudio, tira dúvidas com base no seu manual interno, qualifica o lead e realiza agendamentos direto na agenda do seu time.
+          </p>
+        </Card>
+
+        <Card class="p-6 sm:p-8">
+          <div class="text-3xl font-mono text-emerald-400 font-bold mb-4">02</div>
+          <h2 class="text-xl font-bold text-white mb-3">Orquestração com n8n</h2>
+          <p class="text-sm text-text-secondary leading-relaxed">
+            Integramos seu WhatsApp ao seu CRM (HubSpot, RD Station, Kommo), bancos de dados e sistemas financeiros. Dados trafegam de forma limpa e automática, eliminando o trabalho manual de copiar e colar.
+          </p>
+        </Card>
+
+        <Card class="p-6 sm:p-8">
+          <div class="text-3xl font-mono text-accent-secondary font-bold mb-4">03</div>
+          <h2 class="text-xl font-bold text-white mb-3">Propriedade Total do Código</h2>
+          <p class="text-sm text-text-secondary leading-relaxed">
+            Sua empresa não fica refém de mensalidades por usuário ou limites artificiais de mensagens. A infraestrutura é sua, garantindo soberania de dados e redução drástica no custo operacional.
+          </p>
+        </Card>
+      </div>
+    </Container>
+  </section>
+
+  <FAQAccordion
+    title="Perguntas Frequentes sobre nossa Agência de IA"
+    items={faqs}
+  />
+
+  <DiagnosisCTA />
+</PageLayout>

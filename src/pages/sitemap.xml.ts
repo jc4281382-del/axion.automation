@@ -8,6 +8,7 @@ export const GET: APIRoute = async ({ site }) => {
   const staticPages = [
     { url: '', priority: '1.0', changefreq: 'weekly' },
     { url: '/solucoes', priority: '0.9', changefreq: 'monthly' },
+    { url: '/solucoes/agencia-de-ia', priority: '1.0', changefreq: 'weekly' },
     { url: '/solucoes/desenvolvimento-de-sites', priority: '0.9', changefreq: 'monthly' },
     { url: '/solucoes/site-institucional-b2b', priority: '0.9', changefreq: 'monthly' },
     { url: '/quanto-custa-criar-um-site', priority: '0.9', changefreq: 'monthly' },
