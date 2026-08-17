@@ -18,8 +18,11 @@ pnpm-debug.log*
 # Astro
 .astro/
 
-# IDE / OS
+# IDE / OS / Agent Skills
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
+.agents/
+Design-System/
+
