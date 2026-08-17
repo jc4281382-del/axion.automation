@@ -17,16 +17,8 @@ const currentPath = Astro.url.pathname;
     <div class="flex h-20 items-center justify-between">
       <!-- Logo -->
       <a href="/" class="flex items-center gap-3 group" aria-label="AXION Home">
-        <div class="w-10 h-10 rounded-xl bg-palette-grey-1100 border border-border-subtle flex items-center justify-center group-hover:border-accent-light/40 transition-colors shadow-glow-sm">
-          <svg class="w-6 h-6" viewBox="0 0 32 32" fill="none">
-            <defs>
-              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#052FF0" />
-                <stop offset="100%" stop-color="#7133ED" />
-              </linearGradient>
-            </defs>
-            <path d="M7 23L16 9L25 23H20.5L16 16L11.5 23H7Z" fill="url(#logoGrad)" />
-          </svg>
+        <div class="w-10 h-10 rounded-xl border border-border-subtle flex items-center justify-center group-hover:border-accent-light/40 transition-colors shadow-glow-sm overflow-hidden">
+          <img src="/images/logo.jpeg" alt="AXION Logo" class="w-full h-full object-cover" />
         </div>
         <div class="flex flex-col">
           <span class="text-xl font-bold tracking-wider text-white">AXION</span>
